@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="header-top">
+                <div class="wrapper header-top__wrapper ">
+                    <nav class="header-top__nav">
+                        <a href="#" class="header-top__nav-link">Магазины</a>
+                        <a href="#" class="header-top__nav-link">Акции</a>
+                        <a href="#" class="header-top__nav-link">Доставка и оплата</a>
+                    </nav>
+                    <a href="#" class="logo-link">
+                        <div class="logo-link__logo">
+                            <svg width="53" height="43">
+                                <use xlink:href="../assets/images/logo.svg#logo"></use>
+                            </svg>
+                        </div>
+                        <h1 class="logo-link__company-name">DRIVE MOTO</h1>
+                    </a>
+                    <p class="header-top__address">Москва, ул. Науки 25</p>
+                    <div class="header-top__menu">
+                        <a href="#" class="header-top__menu-links">
+                            <svg width="24" height="22">
+                                <use xlink:href="../assets/icons/heart-icon.svg#heart"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="header-top__menu-links">
+                            <svg width="24" height="22">
+                                <use xlink:href="../assets/icons/person-icon.svg#person"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="header-top__menu-links header-top__menu-links--counter">
+                            <svg width="24" height="22">
+                                <use xlink:href="../assets/icons/cart-icon.svg#cart"></use>
+                            </svg>
+                            <span class="header-top__menu-links-counter">1</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="wrapper header-bottom__wrapper">
+                    <div class="header-bottom__nav">
+                        <a href="#" class="header-bottom__nav-link header-bottom__nav-link-underline">Квадроциклы</a>
+                        <a href="#" class="header-bottom__nav-link">Катера</a>
+                        <a href="#" class="header-bottom__nav-link header-bottom__nav-link--active">Гидроциклы</a>
+                        <a href="#" class="header-bottom__nav-link">Лодки</a>
+                        <a href="#" class="header-bottom__nav-link">Вездеходы</a>
+                        <a href="#" class="header-bottom__nav-link">Снегоходы</a>
+                        <a href="#" class="header-bottom__nav-link">Двигатели</a>
+                        <a href="#" class="header-bottom__nav-link">Запчасти</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="promo">
+                <div class="wrapper">
+                    <div class="swiper promo__swiper">
+
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/slider_banner.jpg" alt="slider" class="swiper-slide__image">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/slider_banner.jpg" alt="slider" class="swiper-slide__image">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/slider_banner.jpg" alt="slider" class="swiper-slide__image">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/slider_banner.jpg" alt="slider" class="swiper-slide__image">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/slider_banner.jpg" alt="slider" class="swiper-slide__image">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/slider_banner.jpg" alt="slider" class="swiper-slide__image">
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+                    <article class="price-article">
+                        <a href="#" class="price-article__link">
+                            <span class="price-article__link-sale">акция</span>
+                            <div class="price-article__price-box">
+                                <span class="price-article__current-price">190 000 </span>
+                                <span class="price-article__old-price">225 000</span>
+                            </div>
+                            <img class="price-article__link-img" src="assets/images/suzuki.png" alt="">
+                            <h3 class="price-article__link-title">Лодочный мотор
+                                Suzuki DF9.9BRS</h3>
+                            <div class="price-article__link-footer">
+                                <div class="price-article__link-footer-text">Акция действует до</div>
+                                <div class="price-article__link-footer-date">31.08.2020</div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="search-section">
+                <div class="wrapper">
+                    <form class="search-form">
+                        <fieldset class="search-form__fieldset">
+                            <div class="search-form__tablist">
+                                <div class="search-form__tab">
+                                    <input id="number-search" type="radio" class="search-form__tab-input"
+                                        name="search-type" value="number-search">
+                                    <label class="search-form__tab-label" for="number-search">Поиск по номеру</label>
+                                </div>
+                                <div class="search-form__tab">
+                                    <input checked id="mark-search" type="radio" class="search-form__tab-input"
+                                        name="search-type" value="mark-search">
+                                    <label class="search-form__tab-label" for="mark-search">Поиск по марке</label>
+                                </div>
+                                <div class="search-form__tab">
+                                    <input id="name-search" type="radio" class="search-form__tab-input"
+                                        name="search-type" value="name-search">
+                                    <label class="search-form__tab-label" for="name-search">Поиск по названию
+                                        товара</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="search-form__fieldset">
+                            <input type="text" class="search-form__input" placeholder="Введите марку">
+                            <button class="search-form__submit-btn">искать</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
