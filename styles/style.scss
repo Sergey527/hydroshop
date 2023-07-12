@@ -371,5 +371,132 @@ body {
   }
 
   &__submit-btn {
+    border-radius: 3px;
+    background: $blue;
+    border: 0;
+    padding: 17px 39px;
+    color: #fff;
+    font-family: $main-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.68px;
+    text-transform: uppercase;
   }
+}
+
+.categories-section {
+  margin-bottom: 80px;
+  &__nav {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  &__nav-block {
+    border-radius: 3px;
+    border: 1px solid #cdcdcd;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    justify-content: space-between;
+    transition: 0.3s;
+  }
+
+  &__nav-block:hover {
+    box-shadow: 3px 3px 20px 0px rgba(50, 50, 50, 0.25);
+    border-color: transparent;
+    .categories-section__nav-block-heading {
+      color: $blue;
+      transition: 0.3s;
+    }
+  }
+
+  &__nav-block-heading {
+    color: $main-text-color;
+    font-family: $main-font;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__nav-block-img {
+  }
+
+  &__nav-block-link {
+    color: $lt-text;
+    font-family: $main-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+  }
+}
+
+.products-section {
+  &__heading {
+    color: $main-text-color;
+    font-family: $main-font;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 25px;
+  }
+
+  &__tab-list {
+  }
+
+  &__tab-btn {
+    background-color: #fff;
+    border: none;
+    color: $main-text-color;
+    text-align: center;
+    font-family: $main-font;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__tab-btn:hover::after {
+    background-color: #1c63cd65;
+  }
+
+  &__tab-btn--active::after {
+    background-color: $blue;
+  }
+
+  &__tab-btn::after {
+    content: "";
+    background-color: transparent;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+  }
+
+  &__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.wrapper {
+}
+
+.subheading {
 }
