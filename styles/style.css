@@ -526,6 +526,12 @@ body {
   line-height: normal;
   margin-bottom: 25px;
 }
+.products-section__tab-list {
+  width: 100%;
+  max-width: 665px;
+  display: flex;
+  gap: 50px;
+}
 .products-section__tab-btn {
   background-color: #fff;
   border: none;
@@ -542,9 +548,6 @@ body {
 .products-section__tab-btn:hover::after {
   background-color: rgba(28, 99, 205, 0.3960784314);
 }
-.products-section__tab-btn--active::after {
-  background-color: #1c62cd;
-}
 .products-section__tab-btn::after {
   content: "";
   background-color: transparent;
@@ -555,7 +558,276 @@ body {
   bottom: -10px;
   transition: 0.3s;
 }
+.products-section__tab-btn--active::after {
+  background-color: #1c62cd;
+}
 .products-section__wrapper {
   flex-direction: column;
   align-items: flex-start;
+}
+.products-section__more-btn {
+  background: #f0f0f4;
+  color: #2f3035;
+  text-align: center;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  padding: 16px 43px;
+  margin: 0 auto;
+  margin-top: 52px;
+  margin-bottom: 82px;
+}
+
+.products-section__swiper {
+  width: 100%;
+}
+
+.product-card {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  border: 1px solid #cdcdcd;
+  width: 100%;
+  max-width: 271px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.product-card__fav-btn {
+  background-color: transparent;
+  border: none;
+  padding: none;
+  position: absolute;
+  right: 19px;
+  top: 16px;
+  cursor: pointer;
+}
+.product-card__link {
+  font-family: "SF Pro Display", sans-serif;
+  border-radius: 3px;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+  padding: 18px 21px;
+  position: absolute;
+  top: 122px;
+  left: 20px;
+  width: 100%;
+  max-width: 230px;
+  text-align: center;
+  text-transform: lowercase;
+  transition: 0.2s;
+  visibility: hidden;
+}
+.product-card:hover .product-card__link {
+  opacity: 0.8999999762;
+  visibility: visible;
+}
+.product-card:hover .product-card__sub-heading,
+.product-card:hover .product-card__price {
+  color: #1c62cd;
+}
+.product-card__image {
+  margin-top: 52px;
+  width: 200px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 14px;
+}
+.product-card__sub-heading {
+  color: #2f3035;
+  text-align: center;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 223px;
+  transition: 0.3s;
+}
+.product-card__price {
+  color: #2f3035;
+  text-align: center;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 31px;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 3px 3px 20px 0px rgba(50, 50, 50, 0.25);
+}
+
+.adv-section__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1170px;
+  max-height: 165px;
+  background-color: #1c62cd;
+  padding-top: 33px;
+  padding-bottom: 16px;
+  margin-bottom: 72px;
+}
+.adv-section__img {
+  width: 152px;
+  height: 116px;
+}
+.adv-section__heading {
+  color: #fff;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  width: 308px;
+  margin-left: 46px;
+}
+.adv-section__btn {
+  color: #2f3035;
+  text-align: right;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px;
+  background-color: #fff;
+  border: none;
+  padding: 3px 41px;
+  margin-left: 11px;
+  cursor: pointer;
+}
+.adv-section__btn:hover {
+  background-color: #cccccc;
+}
+
+.footer {
+  background-color: #f0f0f4;
+}
+
+.footer-top {
+  padding: 42px 0 27px;
+}
+.footer-top__wrapper {
+  width: 100%;
+  justify-content: space-between;
+}
+.footer-top__column {
+  display: flex;
+  flex-direction: column;
+}
+.footer-top__mail-column-heading {
+  color: #2f3035;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 34px;
+  width: 100%;
+  max-width: 222px;
+}
+
+.mail-form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 62.93% 37.07%;
+  grid-template-rows: 1fr;
+}
+.mail-form__input {
+  background-color: #fff;
+  border: none;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 8px 12px;
+  width: 100%;
+}
+.mail-form__input::-moz-placeholder {
+  color: #c4c4c4;
+}
+.mail-form__input::placeholder {
+  color: #c4c4c4;
+}
+.mail-form__input:focus {
+  outline: none;
+}
+.mail-form__btn {
+  color: #fff;
+  text-align: center;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.32px;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  background-color: #1c62cd;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-top__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12.5px;
+}
+.footer-top__column {
+  display: flex;
+  flex-direction: column;
+}
+.footer-top__column-heading {
+  color: #2f3035;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 12.5px;
+}
+.footer-top__column-socials {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.footer-bottom {
+  padding-bottom: 22px;
+}
+.footer-bottom__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-bottom__politics {
+  display: flex;
+  gap: 81px;
+}
+.footer-bottom__politics-link {
+  color: #48494d;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }/*# sourceMappingURL=style.css.map */

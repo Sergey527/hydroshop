@@ -427,9 +427,6 @@ body {
     line-height: normal;
   }
 
-  &__nav-block-img {
-  }
-
   &__nav-block-link {
     color: $lt-text;
     font-family: $main-font;
@@ -455,6 +452,10 @@ body {
   }
 
   &__tab-list {
+    width: 100%;
+    max-width: 665px;
+    display: flex;
+    gap: 50px;
   }
 
   &__tab-btn {
@@ -475,10 +476,6 @@ body {
     background-color: #1c63cd65;
   }
 
-  &__tab-btn--active::after {
-    background-color: $blue;
-  }
-
   &__tab-btn::after {
     content: "";
     background-color: transparent;
@@ -490,13 +487,301 @@ body {
     transition: 0.3s;
   }
 
+  &__tab-btn--active::after {
+    background-color: $blue;
+  }
+
   &__wrapper {
     flex-direction: column;
     align-items: flex-start;
   }
-}
-.wrapper {
+
+  &__more-btn {
+    background: $lt-grey;
+    color: $main-text-color;
+    text-align: center;
+    font-family: $main-font;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    padding: 16px 43px;
+    margin: 0 auto;
+    margin-top: 52px;
+    margin-bottom: 82px;
+  }
 }
 
-.subheading {
+.products-section__swiper {
+  width: 100%;
+}
+
+.product-card {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  border: 1px solid #cdcdcd;
+  width: 100%;
+  max-width: 271px;
+  position: relative;
+  transition: 0.3s;
+
+  cursor: pointer;
+
+  &__fav-btn {
+    background-color: transparent;
+    border: none;
+    padding: none;
+    position: absolute;
+    right: 19px;
+    top: 16px;
+    cursor: pointer;
+  }
+
+  &__link {
+    font-family: $main-font;
+    border-radius: 3px;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+    padding: 18px 21px;
+    position: absolute;
+    top: 122px;
+    left: 20px;
+    width: 100%;
+    max-width: 230px;
+    text-align: center;
+    text-transform: lowercase;
+    transition: 0.2s;
+    visibility: hidden;
+  }
+
+  &:hover {
+    .product-card__link {
+      opacity: 0.8999999761581421;
+      visibility: visible;
+    }
+
+    .product-card__sub-heading,
+    .product-card__price {
+      color: $blue;
+    }
+  }
+
+  &__image {
+    margin-top: 52px;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 14px;
+  }
+
+  &__sub-heading {
+    color: $main-text-color;
+    text-align: center;
+    font-family: $main-font;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 223px;
+    transition: 0.3s;
+  }
+
+  &__price {
+    color: $main-text-color;
+    text-align: center;
+    font-family: $main-font;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 31px;
+    transition: 0.3s;
+  }
+}
+
+.product-card:hover {
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 3px 3px 20px 0px rgba(50, 50, 50, 0.25);
+}
+
+.adv-section {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1170px;
+    max-height: 165px;
+    background-color: $blue;
+    padding-top: 33px;
+    padding-bottom: 16px;
+    margin-bottom: 72px;
+  }
+
+  &__img {
+    width: 152px;
+    height: 116px;
+  }
+
+  &__heading {
+    color: #fff;
+    font-family: $main-font;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    width: 308px;
+    margin-left: 46px;
+  }
+
+  &__btn {
+    color: $main-text-color;
+    text-align: right;
+    font-family: $main-font;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px;
+    background-color: #fff;
+    border: none;
+    padding: 3px 41px;
+    margin-left: 11px;
+    cursor: pointer;
+  }
+
+  &__btn:hover {
+    background-color: #cccccc;
+  }
+}
+
+.footer {
+  background-color: #f0f0f4;
+}
+
+.footer-top {
+  padding: 42px 0 27px;
+  &__wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__mail-column-heading {
+    color: $main-text-color;
+    font-family: $main-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 34px;
+    width: 100%;
+    max-width: 222px;
+  }
+}
+
+.mail-form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 62.93% 37.07%;
+  grid-template-rows: 1fr;
+  &__input {
+    background-color: #fff;
+    border: none;
+    font-family: $main-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 8px 12px;
+    width: 100%;
+    &::placeholder {
+      color: $lt-text;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn {
+    color: #fff;
+    text-align: center;
+    font-family: $main-font;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.32px;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    background-color: $blue;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.footer-top {
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12.5px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__column-heading {
+    color: $main-text-color;
+    font-family: $main-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 12.5px;
+  }
+
+  &__column-socials {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+}
+
+.footer-bottom {
+  padding-bottom: 22px;
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__politics {
+    display: flex;
+    gap: 81px;
+  }
+
+  &__politics-link {
+    color: #48494d;
+    font-family: $main-font;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
